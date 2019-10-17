@@ -1,9 +1,49 @@
 <html lang="en">
 <head>
     <title>Currency selector</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+
+<div class="page-wrapper">
+    <div class="currency-selector-container">
+        <div class="selected-currencies clearfix">
+            <div class="currency">EUR<span class="remove-currency">x</span></div>
+            <div class="currency">CZK<span class="remove-currency">x</span></div>
+            <div class="currency">RUB<span class="remove-currency">x</span></div>
+        </div>
+
+        <div class="currency-list clearfix">
+            <input type="checkbox" id="select-eur"/>
+            <label class="currency" for="select-eur"><span class="checkmark"></span>EUR</label>
+
+            <input type="checkbox" id="select-pln"/>
+            <label class="currency" for="select-pln"><span class="checkmark"></span>PLN</label>
+
+            <input type="checkbox" id="select-gel"/>
+            <label class="currency" for="select-gel"><span class="checkmark"></span>GEL</label>
+
+            <input type="checkbox" id="select-dkk"/>
+            <label class="currency" for="select-dkk"><span class="checkmark"></span>DKK</label>
+
+            <input type="checkbox" id="select-czk"/>
+            <label class="currency" for="select-czk"><span class="checkmark"></span>CZK</label>
+
+            <input type="checkbox" id="select-gbp"/>
+            <label class="currency" for="select-gbp"><span class="checkmark"></span>GBP</label>
+
+            <input type="checkbox" id="select-sek"/>
+            <label class="currency" for="select-sek"><span class="checkmark"></span>SEK</label>
+
+            <input type="checkbox" id="select-usd"/>
+            <label class="currency" for="select-usd"><span class="checkmark"></span>USD</label>
+
+            <input type="checkbox" id="select-rub"/>
+            <label class="currency" for="select-rub"><span class="checkmark"></span>RUB</label>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
