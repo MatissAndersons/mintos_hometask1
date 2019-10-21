@@ -96,7 +96,15 @@ html {
     vertical-align: top;
 }
 
-.currency-list input[type="checkbox"]:checked + .currency .checkmark:before {
+#select-eur:checked ~ .currency-list .currency.select-eur .checkmark:before,
+#select-pln:checked ~ .currency-list .currency.select-pln .checkmark:before,
+#select-gel:checked ~ .currency-list .currency.select-gel .checkmark:before,
+#select-dkk:checked ~ .currency-list .currency.select-dkk .checkmark:before,
+#select-czk:checked ~ .currency-list .currency.select-czk .checkmark:before,
+#select-gbp:checked ~ .currency-list .currency.select-gbp .checkmark:before,
+#select-sek:checked ~ .currency-list .currency.select-sek .checkmark:before,
+#select-usd:checked ~ .currency-list .currency.select-usd .checkmark:before,
+#select-rub:checked ~ .currency-list .currency.select-rub .checkmark:before {
     content: 'x';
     position: absolute;
     left: 7px;
@@ -104,13 +112,38 @@ html {
     color: red;
 }
 
-.currency-list input[type="checkbox"] {
+input[type="checkbox"] {
     position: absolute;
     z-index: 0;
     opacity: 0;
     pointer-events: none;
 }
 
-.currency-list input[type="checkbox"]:checked + .currency {
+#select-eur:checked ~ .currency-list .currency.select-eur,
+#select-pln:checked ~ .currency-list .currency.select-pln,
+#select-gel:checked ~ .currency-list .currency.select-gel,
+#select-dkk:checked ~ .currency-list .currency.select-dkk,
+#select-czk:checked ~ .currency-list .currency.select-czk,
+#select-gbp:checked ~ .currency-list .currency.select-gbp,
+#select-sek:checked ~ .currency-list .currency.select-sek,
+#select-usd:checked ~ .currency-list .currency.select-usd,
+#select-rub:checked ~ .currency-list .currency.select-rub {
     background-color: #fff;
+}
+
+
+.selected-currencies .currency {
+    display: none;
+}
+
+#select-eur:checked ~ .selected-currencies .eur-selected,
+#select-pln:checked ~ .selected-currencies .pln-selected,
+#select-gel:checked ~ .selected-currencies .gel-selected,
+#select-dkk:checked ~ .selected-currencies .dkk-selected,
+#select-czk:checked ~ .selected-currencies .czk-selected,
+#select-gbp:checked ~ .selected-currencies .gbp-selected,
+#select-sek:checked ~ .selected-currencies .sek-selected,
+#select-usd:checked ~ .selected-currencies .usd-selected,
+#select-rub:checked ~ .selected-currencies .rub-selected {
+    display: block;
 }
